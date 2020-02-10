@@ -8,7 +8,7 @@ public class East extends Direction implements Directions {
 
     @Override
     public Direction turnLeft() {
-        return new East('W');
+        return new East('N');
     }
 
     @Override
