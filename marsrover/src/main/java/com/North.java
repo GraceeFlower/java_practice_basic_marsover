@@ -1,19 +1,18 @@
 package com;
 
-public class North implements Directions {
+public class North extends Direction implements Directions {
 
-    @Override
-    public char getDirect() {
-        return 'N';
+    public North(char direction) {
+        super(direction);
     }
 
     @Override
-    public char getLeft() {
-        return 'W';
+    public Direction turnLeft() {
+        return new Direction('W');
     }
 
     @Override
-    public char getRight() {
-        return 'E';
+    public Direction turnRight() {
+        return new Direction('E');
     }
 }

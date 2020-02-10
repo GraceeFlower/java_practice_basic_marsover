@@ -2,7 +2,6 @@ package com;
 
 public interface Directions {
 
-    public abstract char getDirect();
-    public abstract char getLeft();
-    public abstract char getRight();
+    public abstract Direction turnLeft();
+    public abstract Direction turnRight();
 }
