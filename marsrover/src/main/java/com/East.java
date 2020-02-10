@@ -1,13 +1,14 @@
 package com;
 
 public class East implements Directions {
+
     @Override
-    public String getLeft() {
-        return "S";
+    public char getLeft() {
+        return 'S';
     }
 
     @Override
-    public String getRight() {
-        return "N";
+    public char getRight() {
+        return 'N';
     }
 }

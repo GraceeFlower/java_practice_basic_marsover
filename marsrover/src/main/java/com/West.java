@@ -1,13 +1,14 @@
 package com;
 
 public class West implements Directions {
+
     @Override
-    public String getLeft() {
-        return "N";
+    public char getLeft() {
+        return 'N';
     }
 
     @Override
-    public String getRight() {
-        return "S";
+    public char getRight() {
+        return 'S';
     }
 }
