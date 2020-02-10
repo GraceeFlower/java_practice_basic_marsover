@@ -8,11 +8,11 @@ public class South implements Directions {
 
     @Override
     public char getLeft() {
-        return 'W';
+        return 'E';
     }
 
     @Override
     public char getRight() {
-        return 'E';
+        return 'W';
     }
 }

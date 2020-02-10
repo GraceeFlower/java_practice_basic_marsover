@@ -9,11 +9,11 @@ public class East implements Directions {
 
     @Override
     public char getLeft() {
-        return 'S';
+        return 'N';
     }
 
     @Override
     public char getRight() {
-        return 'N';
+        return 'S';
     }
 }

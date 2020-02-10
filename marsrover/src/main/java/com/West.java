@@ -9,11 +9,11 @@ public class West implements Directions {
 
     @Override
     public char getLeft() {
-        return 'N';
+        return 'S';
     }
 
     @Override
     public char getRight() {
-        return 'S';
+        return 'N';
     }
 }
