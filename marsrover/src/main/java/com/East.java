@@ -1,6 +1,6 @@
 package com;
 
-public class East extends Direction implements Directions {
+public class East extends Direction implements ChooseDirection {
 
     public East(char direction) {
         super(direction);

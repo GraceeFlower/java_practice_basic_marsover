@@ -1,6 +1,6 @@
 package com;
 
-public interface Directions {
+public interface ChooseDirection {
 
     public abstract Direction turnLeft();
     public abstract Direction turnRight();
