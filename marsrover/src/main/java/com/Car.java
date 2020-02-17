@@ -1,10 +1,20 @@
 package com;
 
 public class Car {
-    public static void main(String[] args) {
-        Direction car = new Direction('S', new South());
+  private Direction currentDirection;
 
-        System.out.println("小车左转之后的方位是：" + car.turnLeft());
-        System.out.println("小车右转之后的方位是：" + car.turnRight());
-    }
+  public Car(Direction currentDirection) {
+    this.currentDirection = currentDirection;
+  }
+
+  public Car() {
+  }
+
+  public void turnLeft() {
+    System.out.println(this.currentDirection.turnLeft());
+  }
+
+  public void turnRight() {
+    System.out.println(this.currentDirection.turnRight());
+  }
 }

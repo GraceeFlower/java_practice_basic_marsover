@@ -1,42 +1,51 @@
 package com;
 
-public class Direction {
-  private final char direction;
-  private ChooseDirection chooseDirection;
+public enum Direction implements ChooseDirection {
+  N{
+    @Override
+    public Direction turnLeft() {
+      return Direction.W;
+    }
 
-  public Direction(char direction, ChooseDirection chooseDirection) {
-    this.direction = direction;
-    this.chooseDirection = chooseDirection;
-  }
+    @Override
+    public Direction turnRight() {
+      return Direction.E;
+    }
+  },
 
-  public Direction turnLeft() {
-    return chooseDirection.turnLeft();
-  }
+  S {
+    @Override
+    public Direction turnLeft() {
+      return Direction.E;
+    }
 
-  public Direction turnRight() {
-    return chooseDirection.turnRight();
-  }
+    @Override
+    public Direction turnRight() {
+      return Direction.W;
+    }
+  },
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
+  E {
+    @Override
+    public Direction turnLeft() {
+      return Direction.N;
+    }
 
-    Direction direction1 = (Direction) o;
+    @Override
+    public Direction turnRight() {
+      return Direction.S;
+    }
+  },
 
-    if (direction != direction1.direction) return false;
+  W {
+    @Override
+    public Direction turnLeft() {
+      return Direction.S;
+    }
 
-    return true;
-  }
-
-  @Override
-  public int hashCode() {
-    return (int) direction;
-  }
-
-  @Override
-  public String toString() {
-    return "Direction{direction=" + direction + '}';
-  }
-
+    @Override
+    public Direction turnRight() {
+      return Direction.N;
+    }
+  };
 }
