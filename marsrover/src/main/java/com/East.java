@@ -1,18 +1,14 @@
 package com;
 
-public class East extends Direction implements ChooseDirection {
-
-    public East(char direction) {
-        super(direction);
-    }
+public class East implements ChooseDirection {
 
     @Override
     public Direction turnLeft() {
-        return new East('N');
+        return new Direction('N', new East());
     }
 
     @Override
     public Direction turnRight() {
-        return new East('S');
+        return new Direction('S', new East());
     }
 }

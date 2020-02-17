@@ -2,9 +2,19 @@ package com;
 
 public class Direction {
   private final char direction;
+  private ChooseDirection chooseDirection;
 
-  public Direction(char direction) {
+  public Direction(char direction, ChooseDirection chooseDirection) {
     this.direction = direction;
+    this.chooseDirection = chooseDirection;
+  }
+
+  public Direction turnLeft() {
+    return chooseDirection.turnLeft();
+  }
+
+  public Direction turnRight() {
+    return chooseDirection.turnRight();
   }
 
   @Override

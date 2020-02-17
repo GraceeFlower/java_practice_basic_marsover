@@ -1,18 +1,14 @@
 package com;
 
-public class South extends Direction implements ChooseDirection {
-
-    public South(char direction) {
-        super(direction);
-    }
+public class South implements ChooseDirection {
 
     @Override
     public Direction turnLeft() {
-        return new South('E');
+        return new Direction('E', new South());
     }
 
     @Override
     public Direction turnRight() {
-        return new South('W');
+        return new Direction('W', new South());
     }
 }
